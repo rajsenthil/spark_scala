@@ -3,6 +3,7 @@
 .classpath
 .project
 target
+.iml
 test-output/
 bin/
 
