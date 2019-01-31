@@ -4,6 +4,7 @@
 .project
 target
 .iml
+.log
 test-output/
 bin/
 
