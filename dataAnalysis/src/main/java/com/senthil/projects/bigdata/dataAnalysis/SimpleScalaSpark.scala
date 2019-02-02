@@ -1,11 +1,6 @@
 package com.senthil.projects.bigdata.dataAnalysis
 
-import java.text.SimpleDateFormat
-import java.time.Period
-import java.util.{Date, Scanner}
-
-import org.apache.spark.SparkContext
-import org.apache.spark.SparkConf
+import org.apache.spark.{SparkConf, SparkContext}
 
 object SimpleScalaSpark {
   def main(args: Array[String]) {

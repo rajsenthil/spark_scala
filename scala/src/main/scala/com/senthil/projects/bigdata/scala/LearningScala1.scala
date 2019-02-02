@@ -15,7 +15,6 @@ object LearningScala1 {
     val scanner = new Scanner(System.in)
     val birthDate = scanner.nextLine
     val format = DateTimeFormatter.ofPattern("yyyy/MM/dd")
-//    val format = DateTimeFormatter.BASIC_ISO_DATE
     val period = Period.between(LocalDate.parse(birthDate, format), LocalDate.now())
     println(s"Age is ${period.getYears}")
   }
