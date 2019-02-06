@@ -108,6 +108,7 @@
           </execution>
         </executions>
       </plugin>
+      <!--
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -118,7 +119,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>com.senthil.projects.datastructures.LinkedList</mainClass>
+              <mainClass>com.senthil.projects.bigdata.dataAnalysis.MovieSuggest</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -131,6 +132,7 @@
           </execution>
         </executions>
       </plugin>
+-->
     </plugins>
   </build>
 </project>

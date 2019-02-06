@@ -21,8 +21,9 @@ object PopularMovies {
 
     var movieMap: Map[Int, String] = Map()
 
-    val path = getClass.getResource("/ml-latest-small/movies.csv")
-    val source = Source.fromFile(path.getPath).getLines().drop(1)
+    val path = getClass.getResource("./ml-latest-small/movies.csv")
+//    val source = Source.fromFile(path.getPath).getLines().drop(1)
+    val source = Source.fromFile("./ml-latest-small/movies.csv").getLines().drop(1)
 
     for(line <- source) {
       val fields = line.split(",")
@@ -41,8 +42,9 @@ object PopularMovies {
 
     val movieNames = sc.broadcast(loadMovieNames)
 
-    val path = getClass.getResource("/ml-latest-small/ratings.csv")
-    val lines = sc.textFile(path.getPath).mapPartitionsWithIndex {
+//    val path = getClass.getResource("./ml-latest-small/ratings.csv")
+    val path = "./ml-latest-small/ratings.csv"
+    val lines = sc.textFile(path).mapPartitionsWithIndex {
       (idx, iter) => if (idx == 0) iter.drop(1) else iter
     }
     val movies = lines.map(parseLine).map(x => (x,1)).reduceByKey((x,y) => x+y)
